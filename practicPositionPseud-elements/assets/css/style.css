@@ -69,7 +69,8 @@ span {
   right: 50px;
   top: -10px;
 }
-.circle{
+.cardStats::after {
+  content: "";
   position: absolute;
   right: -30px;
   top: 120px;
@@ -80,14 +81,18 @@ span {
 
   border-radius: 50%;
 }
-.top{
+
+.heading::after {
+  content: "";
+  position: absolute;
   right: -140px;
   top: -120px;
-}
+  opacity: 0.25;
+  height: 300px;
+  width: 300px;
+  background-color: white;
 
-.bottom{
-  right: -30px;
-  top: 120px;
+  border-radius: 50%;
 }
 
 span:first-child{
