@@ -23,6 +23,7 @@ span {
   border-radius: 10px;
   font-size: 1em;
   text-indent: 2em;
+  overflow: hidden;
   
 }
 
