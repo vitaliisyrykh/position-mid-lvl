@@ -1,4 +1,4 @@
-.statsCards {
+.cards {
   display: inline-block;
   width: 100%;
   color: white;
@@ -11,9 +11,7 @@ span {
   display: block;
 }
 
-.weeklySalesStat,
-.weeklyOrderStat,
-.visitorsStat {
+.cardStats {
  
   box-sizing: border-box;
   display: inherit;
@@ -39,7 +37,7 @@ span {
   position: absolute;
   bottom: 30px;
 }
-.weeklySalesStat {
+.cardStats:nth-child(1n) {
   background-image: rgb(255, 145, 172);
   background: linear-gradient(
     133deg,
@@ -48,7 +46,7 @@ span {
     rgba(254, 185, 152, 1) 100%
   );
 }
-.weeklyOrderStat {
+.cardStats:nth-child(2n) {
   background: rgb(140, 201, 248);
   background: linear-gradient(
     133deg,
@@ -57,7 +55,7 @@ span {
     rgba(46, 153, 235, 1) 100%
   );
 }
-.visitorsStat {
+.cardStats:nth-child(3n)  {
   background: rgb(123, 217, 210);
   background: linear-gradient(
     133deg,
@@ -72,7 +70,8 @@ span {
   right: 50px;
   top: -10px;
 }
-.circle{
+.cardStats::after {
+  content: "";
   position: absolute;
   right: -30px;
   top: 120px;
@@ -83,14 +82,18 @@ span {
 
   border-radius: 50%;
 }
-.top{
+
+.heading::after {
+  content: "";
+  position: absolute;
   right: -140px;
   top: -120px;
-}
+  opacity: 0.25;
+  height: 300px;
+  width: 300px;
+  background-color: white;
 
-.bottom{
-  right: -30px;
-  top: 120px;
+  border-radius: 50%;
 }
 
 span:first-child{
